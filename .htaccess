@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteRule ^danh-sach-can-bo-giao-vien.html$ index.php
+
+RewriteRule ^xoa-cbgv-id-(.*).html$ index.php?controller=cbgv&xoa-id=$1

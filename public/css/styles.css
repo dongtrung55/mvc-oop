@@ -1,0 +1,15 @@
+.container{
+	margin-top: 70px;
+}
+.container h1{
+	text-align: center;
+	margin-bottom: 10px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #605D5D;
+}
+.dropdown-menu{
+	min-width: 85px;
+}
+.button{
+	float: right;
+}
