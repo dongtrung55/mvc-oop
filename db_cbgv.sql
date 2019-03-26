@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 25, 2019 lúc 05:19 PM
+-- Thời gian đã tạo: Th3 26, 2019 lúc 10:06 AM
 -- Phiên bản máy phục vụ: 10.1.34-MariaDB
 -- Phiên bản PHP: 7.2.7
 
@@ -45,7 +45,12 @@ CREATE TABLE `tblcbgv` (
 
 INSERT INTO `tblcbgv` (`cbgv_id`, `cbgv_name`, `cbgv_birthday`, `cbgv_address`, `cbgv_luongcung`, `cbgv_luongthuong`, `cbgv_luongphat`, `cbgv_luonglinhthuc`) VALUES
 (1, 'Phạm Trung Đông', '1997-09-05', 'Tân Cương - Vĩnh Tường - Vĩnh Phúc', 6000000, 1000000, 100000, 6900000),
-(11, 'Nguyễn Thị Lan', '1996-11-22', 'Lý Nhân - Hà Nam', 6000000, 1000000, 100000, 6900000);
+(2, 'Nguyễn Thị Lan', '1996-11-22', 'Lý Nhân - Hà Nam', 6000000, 1000000, 100000, 6900000),
+(3, 'Vũ Thị Loan', '1995-08-16', 'Ninh Bình', 5000000, 1000000, 100000, 5900000),
+(4, 'Bùi Trung Kiên', '1993-05-10', 'Hà Nội, Việt Nam', 10000000, 2000000, 500000, 11500000),
+(5, 'Trần Trịnh Quỳnh Lâm', '1997-01-01', 'Hà Nội, Việt Nam', 5000000, 1000000, 500000, 5500000),
+(6, 'Đào Văn Huy', '1995-01-01', 'Hà Nội, Việt Nam', 5000000, 500000, 200000, 5300000),
+(7, 'Nguyễn Thị Thu Thảo', '1997-01-01', 'Đan Phượng, Hà Nội, Việt Nam', 5000000, 1000000, 700000, 5300000);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -65,7 +70,7 @@ ALTER TABLE `tblcbgv`
 -- AUTO_INCREMENT cho bảng `tblcbgv`
 --
 ALTER TABLE `tblcbgv`
-  MODIFY `cbgv_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `cbgv_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

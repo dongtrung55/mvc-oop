@@ -1,6 +1,4 @@
 <?php 
-	//load file config
-	include "config/config.php";
 	//load model
 	include "model/method.php";
 	

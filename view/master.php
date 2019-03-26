@@ -21,16 +21,10 @@
 </head>
 <body>
 	<div class="container">
-		<h1>DANH SÁCH LƯƠNG CÁN BỘ GIÁO VIÊN</h1>
-		<div class="button">
-			<button class="btn btn-primary btn-md"> <i class="fa fa-plus"></i> Thêm mới</button>
-		</div>
-		<br/><br/>
 		<?php 
 		if(file_exists($controller))
 			include $controller;
 		?>
 	</div>
-	
 </body>
 </html>
