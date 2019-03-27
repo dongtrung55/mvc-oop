@@ -9,7 +9,7 @@ class Conection extends Config
     public static function getList($table)
     {
         $sql = "SELECT * FROM $table";
-        return parent::getList($sql);
+        return Config::getList($sql);
     }
 
     /*
