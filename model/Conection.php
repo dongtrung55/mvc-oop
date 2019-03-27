@@ -1,9 +1,11 @@
 <?php
-class Conection {
+include_once "config/Config.php";
 
-	public function getList($table) {
+class Conection extends Config {
+
+	public static function getList($table) {
 		$sql = "SELECT * FROM $table";
-		$this->getList($sql);
+		return parent::getList($sql);
 	}
 
 	public function getGV($table, $id) {

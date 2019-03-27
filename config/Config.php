@@ -2,11 +2,9 @@
 /**
  *
  */
-class Config
-{
+class Config {
 
-	protected $db = null;
-	function connect() {
+	public static function connect() {
 		$hostname = "localhost";
 		$user = "root";
 		$password = "";
@@ -16,8 +14,8 @@ class Config
 		return $db;
 	}
 
-	function getList($sql) {
-		$result = mysqli_query($db->connect(), $sql);
+	public static function getList($sql) {
+		$result = mysqli_query(self::connect(), $sql);
 		$arr = array();
 		while ($rows = mysqli_fetch_object($result)) {
 			$arr[] = $rows;

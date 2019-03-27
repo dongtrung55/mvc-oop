@@ -2,7 +2,7 @@
 //load model
 include "model/Repo.php";
 //load kết nối
-include "config/Config.php";
+include_once "config/Config.php";
 
 //lấy giá trị controller truyền từ url
 $controller = isset($_GET["controller"]) ? $_GET["controller"] : "";
