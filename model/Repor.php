@@ -23,8 +23,8 @@ class Repor
 		return $this->_cnn->addcbgv(self::tblcbgv,$add_cbgv);
 	}
 
-	public function updatecbgv($edit_cbgv,$id){
-		return $this->_cnn->updatecbgv(self::tblcbgv,$edit_cbgv,$id);
+	public function updatecbgv($edit_cbgv,$_cbgv_id){
+		return $this->_cnn->updatecbgv(self::tblcbgv,$edit_cbgv,$_cbgv_id);
 	}
 
 	public function deletecbgv($_cbgv_id){

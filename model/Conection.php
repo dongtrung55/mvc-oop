@@ -35,14 +35,14 @@ class Conection
 		echo "<script>alert('Thêm thành công!');</script>";
 	}
 
-	public function updatecbgv($table,$edit_cbgv,$id)
+	public function updatecbgv($table,$edit_cbgv,$_cbgv_id)
 	{
 		$db = new Config();
 		$sql='';
 		foreach ($edit_cbgv as $key => $value) {
 			$sql .= "$key = '" . trim($value) . "',";
 		}
-		$sql= "UPDATE " . $table . " SET " . trim($sql, ",") . " WHERE cbgv_id = " . $id;
+		$sql= "UPDATE " . $table . " SET " . trim($sql, ",") . " WHERE cbgv_id = " . $_cbgv_id;
 		mysqli_query($db->connect(),$sql);
 		echo "<script>alert('Cập nhật thành công!');</script>";
 	}
