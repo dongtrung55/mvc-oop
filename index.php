@@ -1,8 +1,10 @@
 <?php 
 	//load model
 	include "model/Repor.php";
+	//load kết nối
+	include "config/Config.php";
 	
-	//lay gia tri cua bien controller truyen tu url
+	//lấy giá trị controller truyền từ url
 	$controller = isset($_GET["controller"])?$_GET["controller"]:"";
 	if($controller != ""){
 		$controller = "controller/Controller_$controller.php";

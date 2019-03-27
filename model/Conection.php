@@ -1,5 +1,4 @@
 <?php
-include "config/Config.php";
 class Conection
 {
 	public function get_list($table)
