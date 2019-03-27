@@ -23,9 +23,7 @@ class Nguoi{
      */
     public function setCbgvId($_cbgv_id)
     {
-        $this->_cbgv_id = $_cbgv_id;
-
-        return $this;
+        $this->cbgv_id = $_cbgv_id;
     }
 
     /**
@@ -43,9 +41,7 @@ class Nguoi{
      */
     public function setCbgvName($_cbgv_name)
     {
-        $this->_cbgv_name = $_cbgv_name;
-
-        return $this;
+        $this->cbgv_name = $_cbgv_name;
     }
 
     /**
@@ -63,9 +59,7 @@ class Nguoi{
      */
     public function setCbgvBirthday($_cbgv_birthday)
     {
-        $this->_cbgv_birthday = $_cbgv_birthday;
-
-        return $this;
+        $this->cbgv_birthday = $_cbgv_birthday;
     }
 
     /**
@@ -83,9 +77,7 @@ class Nguoi{
      */
     public function setCbgvAddress($_cbgv_address)
     {
-        $this->_cbgv_address = $_cbgv_address;
-
-        return $this;
+        $this->cbgv_address = $_cbgv_address;
     }
 }
 ?>

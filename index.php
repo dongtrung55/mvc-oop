@@ -1,6 +1,6 @@
 <?php 
 	//load model
-	include "model/Method.php";
+	include "model/Repor.php";
 	
 	//lay gia tri cua bien controller truyen tu url
 	$controller = isset($_GET["controller"])?$_GET["controller"]:"";

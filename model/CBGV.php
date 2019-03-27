@@ -10,6 +10,7 @@ class CBGV extends Nguoi
 	protected $_cbgv_luongcung;
 	protected $_cbgv_luongthuong;
 	protected $_cbgv_luongphat;
+    protected $_cbgv_luonglinhthuc;
 	
     /**
      * @return mixed
@@ -26,9 +27,7 @@ class CBGV extends Nguoi
      */
     public function setCbgvLuongcung($_cbgv_luongcung)
     {
-    	$this->_cbgv_luongcung = $_cbgv_luongcung;
-
-    	return $this;
+    	$this->cbgv_luongcung = $_cbgv_luongcung;
     }
 
     /**
@@ -46,9 +45,7 @@ class CBGV extends Nguoi
      */
     public function setCbgvLuongthuong($_cbgv_luongthuong)
     {
-    	$this->_cbgv_luongthuong = $_cbgv_luongthuong;
-
-    	return $this;
+    	$this->cbgv_luongthuong = $_cbgv_luongthuong;
     }
 
     /**
@@ -66,9 +63,25 @@ class CBGV extends Nguoi
      */
     public function setCbgvLuongphat($_cbgv_luongphat)
     {
-    	$this->_cbgv_luongphat = $_cbgv_luongphat;
+    	$this->cbgv_luongphat = $_cbgv_luongphat;
+    }
 
-    	return $this;
+    /**
+     * @return mixed
+     */
+    public function getCbgvLuonglinhthuc()
+    {
+        return $this->_cbgv_luonglinhthuc;
+    }
+
+    /**
+     * @param mixed $_cbgv_luonglinhthuc
+     *
+     * @return self
+     */
+    public function setCbgvLuonglinhthuc($_cbgv_luonglinhthuc)
+    {
+        $this->cbgv_luonglinhthuc = $_cbgv_luonglinhthuc;
     }
 }
 ?>

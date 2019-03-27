@@ -2,7 +2,7 @@
 	class Controller_CBGV{
 		public $model;
 		public function __construct(){
-			$this->model= new Method();
+			$this->model= new Repor();
 			if(isset($_GET["xoa-id"])){
 				$id = $_GET["xoa-id"];
 				$this->model->deletecbgv($id);
