@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 26, 2019 lúc 10:06 AM
+-- Thời gian đã tạo: Th3 27, 2019 lúc 04:44 AM
 -- Phiên bản máy phục vụ: 10.1.34-MariaDB
 -- Phiên bản PHP: 7.2.7
 
@@ -70,7 +70,7 @@ ALTER TABLE `tblcbgv`
 -- AUTO_INCREMENT cho bảng `tblcbgv`
 --
 ALTER TABLE `tblcbgv`
-  MODIFY `cbgv_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `cbgv_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
