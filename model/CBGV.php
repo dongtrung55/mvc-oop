@@ -5,83 +5,74 @@ include "Nguoi.php";
 
 use Nguoi\Nguoi;
 
-class CBGV extends Nguoi
-{
-	protected $_cbgv_luongcung;
-	protected $_cbgv_luongthuong;
-	protected $_cbgv_luongphat;
-    protected $_cbgv_luonglinhthuc;
-	
-    /**
-     * @return mixed
-     */
-    public function getCbgvLuongcung()
-    {
-    	return $this->_cbgv_luongcung;
-    }
+class CBGV extends Nguoi {
+	protected $_luongCung;
+	protected $_luongThuong;
+	protected $_luongPhat;
+	protected $_luongLinhThuc;
 
-    /**
-     * @param mixed $_cbgv_luongcung
-     *
-     * @return self
-     */
-    public function setCbgvLuongcung($_cbgv_luongcung)
-    {
-    	$this->cbgv_luongcung = $_cbgv_luongcung;
-    }
+	/**
+	 * @return mixed
+	 */
+	public function getLuongCung() {
+		return $this->luongCung;
+	}
 
-    /**
-     * @return mixed
-     */
-    public function getCbgvLuongthuong()
-    {
-    	return $this->_cbgv_luongthuong;
-    }
+	/**
+	 * @param mixed $luongCung
+	 *
+	 * @return self
+	 */
+	public function setLuongCung($_luongCung) {
+		$this->luongCung = $_luongCung;
+	}
 
-    /**
-     * @param mixed $_cbgv_luongthuong
-     *
-     * @return self
-     */
-    public function setCbgvLuongthuong($_cbgv_luongthuong)
-    {
-    	$this->cbgv_luongthuong = $_cbgv_luongthuong;
-    }
+	/**
+	 * @return mixed
+	 */
+	public function getLuongThuong() {
+		return $this->luongThuong;
+	}
 
-    /**
-     * @return mixed
-     */
-    public function getCbgvLuongphat()
-    {
-    	return $this->_cbgv_luongphat;
-    }
+	/**
+	 * @param mixed $luongThuong
+	 *
+	 * @return self
+	 */
+	public function setLuongThuong($_luongThuong) {
+		$this->luongThuong = $_luongThuong;
+	}
 
-    /**
-     * @param mixed $_cbgv_luongphat
-     *
-     * @return self
-     */
-    public function setCbgvLuongphat($_cbgv_luongphat)
-    {
-    	$this->cbgv_luongphat = $_cbgv_luongphat;
-    }
+	/**
+	 * @return mixed
+	 */
+	public function getLuongPhat() {
+		return $this->luongPhat;
+	}
 
-    /**
-     * @return mixed
-     */
-    public function getCbgvLuonglinhthuc()
-    {
-        return $this->_cbgv_luonglinhthuc;
-    }
+	/**
+	 * @param mixed $luongPhat
+	 *
+	 * @return self
+	 */
+	public function setLuongPhat($_luongPhat) {
+		$this->luongPhat = $_luongPhat;
+	}
 
-    /**
-     * @param mixed $_cbgv_luonglinhthuc
-     *
-     * @return self
-     */
-    public function setCbgvLuonglinhthuc($_cbgv_luonglinhthuc)
-    {
-        $this->cbgv_luonglinhthuc = $_cbgv_luonglinhthuc;
-    }
+	/**
+	 * @return mixed
+	 */
+	public function getLuongLinhThuc() {
+		return $this->luongLinhThuc;
+	}
+
+	/**
+	 * @param mixed $luongLinhThuc
+	 *
+	 * @return self
+	 */
+	public function setLuongLinhThuc($_luongLinhThuc) {
+		$this->luongLinhThuc = $_luongLinhThuc;
+	}
 }
 ?>

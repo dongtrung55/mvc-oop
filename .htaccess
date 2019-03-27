@@ -2,12 +2,12 @@ RewriteEngine On
 
 RewriteRule ^danh-sach-can-bo-giao-vien.html$ index.php
 
-RewriteRule ^them-can-bo-giao-vien.html$ index.php?controller=add_edit_cbgv&act=add
+RewriteRule ^them-can-bo-giao-vien.html$ index.php?controller=GV&act=add
 
-RewriteRule ^thuc-hien-them-can-bo-giao-vien.html$ index.php?controller=add_edit_cbgv&act=do_add
+RewriteRule ^thuc-hien-them-can-bo-giao-vien.html$ index.php?controller=GV&act=do_add
 
-RewriteRule ^sua-thong-tin-can-bo-giao-vien-(.*).html$ index.php?controller=add_edit_cbgv&act=edit&id=$1
+RewriteRule ^sua-thong-tin-can-bo-giao-vien-(.*).html$ index.php?controller=GV&act=edit&id=$1
 
-RewriteRule ^thuc-hien-sua-thong-tin-can-bo-giao-vien-(.*).html$ index.php?controller=add_edit_cbgv&act=do_edit&id=$1
+RewriteRule ^thuc-hien-sua-thong-tin-can-bo-giao-vien-(.*).html$ index.php?controller=GV&act=do_edit&id=$1
 
 RewriteRule ^xoa-cbgv-id-(.*).html$ index.php?controller=cbgv&xoa-id=$1
