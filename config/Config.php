@@ -31,7 +31,7 @@ class Config
     /*
      * Thuc hien cau truy van lay ra thogn tin mot giao vien
      */
-    public function getGV($sql, $id)
+    public function getGV($sql)
     {
         $result = mysqli_query(self::connect(), $sql);
         $arr = mysqli_fetch_object($result);

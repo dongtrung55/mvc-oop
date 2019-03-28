@@ -18,7 +18,7 @@ class Conection
     public function getGV($table, $id)
     {
         $sql = "SELECT * FROM $table WHERE id = $id";
-        return Config::getGV($sql, $id);
+        return Config::getGV($sql);
     }
 
     /*
