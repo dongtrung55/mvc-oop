@@ -1,5 +1,5 @@
 <?php
-include "model/CBGV.php";
+include_once "model/CBGV.php";
 
 use CBGV\CBGV;
 

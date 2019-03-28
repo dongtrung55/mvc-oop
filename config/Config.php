@@ -1,4 +1,7 @@
 <?php
+include_once "model/CBGV.php";
+
+use CBGV\CBGV;
 
 /**
  *
@@ -21,21 +24,39 @@ class Config
     public function getList($sql)
     {
         $result = mysqli_query(self::connect(), $sql);
-        $arr = array();
-        while ($rows = mysqli_fetch_object($result)) {
-            $arr[] = $rows;
+        $arr= Array();
+        foreach ($result as $values) {
+            $gv = new CBGV();
+            $gv->setID($values['id']);
+            $gv->setName($values['name']);
+            $gv->setBirthDay($values['birthDay']);
+            $gv->setAddress($values['address']);
+            $gv->setLuongCung($values['luongCung']);
+            $gv->setLuongThuong($values['luongThuong']);
+            $gv->setLuongPhat($values['luongPhat']);
+            $gv->setLuongLinhThuc($values['luongLinhThuc']);
+            $arr[]=$gv;
         }
         return $arr;
     }
 
     /*
-     * Thuc hien cau truy van lay ra thogn tin mot giao vien
+     * Thuc hien cau truy van lay ra thong tin mot giao vien
      */
     public function getARecord($sql)
     {
         $result = mysqli_query(self::connect(), $sql);
-        $arr = mysqli_fetch_object($result);
-        return $arr;
+        foreach ($result as $values) {
+            $gv = new CBGV();
+            $gv->setID($values['id']);
+            $gv->setName($values['name']);
+            $gv->setBirthDay($values['birthDay']);
+            $gv->setAddress($values['address']);
+            $gv->setLuongCung($values['luongCung']);
+            $gv->setLuongThuong($values['luongThuong']);
+            $gv->setLuongPhat($values['luongPhat']);
+        }
+        return $gv;
     }
 
     /*
