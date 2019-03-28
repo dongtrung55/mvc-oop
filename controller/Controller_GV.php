@@ -60,7 +60,6 @@ class Controller_GV
             //load view
             include "view/View_CBGV.php";
         }
-
     }
 }
 
