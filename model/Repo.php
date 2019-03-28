@@ -1,5 +1,5 @@
 <?php
-include "Conection.php";
+include "config/Conection.php";
 
 class Repo
 {

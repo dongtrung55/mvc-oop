@@ -1,5 +1,4 @@
 <?php
-
 /**
  *
  */
@@ -14,7 +13,6 @@ class Config
         mysqli_set_charset($db, "UTF8");
         return $db;
     }
-
     /*
     * Thuc hien cau truy van lay ra danh sach giao vien
     */
@@ -27,24 +25,26 @@ class Config
         }
         return $arr;
     }
-
     /*
      * Thuc hien cau truy van lay ra thogn tin mot giao vien
      */
-    public function getGV($sql)
+    public function getARecord($sql)
     {
         $result = mysqli_query(self::connect(), $sql);
         $arr = mysqli_fetch_object($result);
         return $arr;
     }
-
     /*
      * Thuc hien cau truy van
     */
-    public function ExGV($sql)
+    public function Execute($sql)
     {
         mysqli_query(self::connect(), $sql);
     }
-}
 
+    public function __destruct()
+    {
+            mysqli_close(self::connect());
+    }
+}
 ?>

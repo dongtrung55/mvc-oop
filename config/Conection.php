@@ -1,5 +1,5 @@
 <?php
-include_once "config/Config.php";
+include_once "Config.php";
 
 class Conection
 {
@@ -18,7 +18,7 @@ class Conection
     public function getGV($table, $id)
     {
         $sql = "SELECT * FROM $table WHERE id = $id";
-        return Config::getGV($sql);
+        return Config::getARecord($sql);
     }
 
     /*
@@ -33,7 +33,7 @@ class Conection
             $value_column .= ",'" . $value . "'";
         }
         $sql = "INSERT INTO " . $table . "(" . trim($name_column, ",") . ") VALUES (" . trim($value_column, ",") . ")";
-        return Config::ExGV($sql);
+        return Config::Execute($sql);
     }
 
     /*
@@ -47,7 +47,7 @@ class Conection
             $sql .= "$key = '" . trim($value) . "',";
         }
         $sql = "UPDATE " . $table . " SET " . trim($sql, ",") . " WHERE id = " . $id;
-        return Config::ExGV($sql);
+        return Config::Execute($sql);
     }
 
     /*
@@ -56,7 +56,7 @@ class Conection
     public function deleteGV($table, $id)
     {
         $sql = "DELETE FROM $table WHERE id = $id";
-        return Config::ExGV($sql);
+        return Config::Execute($sql);
     }
 }
 
