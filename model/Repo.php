@@ -24,7 +24,7 @@ class Repo
      * */
     public function getGV($id)
     {
-        return $this->conection->getGV(self::tblcbgv, $id);
+        return $this->conection->getARecord(self::tblcbgv, $id);
     }
 
     /*

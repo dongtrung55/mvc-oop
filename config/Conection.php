@@ -15,7 +15,7 @@ class Conection
     /*
     * lay ra thong tin cua mot giao vien
     */
-    public function getGV($table, $id)
+    public function getARecord($table, $id)
     {
         $sql = "SELECT * FROM $table WHERE id = $id";
         return Config::getARecord($sql);
