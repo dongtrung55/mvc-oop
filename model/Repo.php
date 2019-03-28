@@ -3,12 +3,12 @@ include "config/Conection.php";
 
 class Repo
 {
-    protected $_cnn;
+    protected $conection;
     const tblcbgv = 'tblcbgv';
 
     public function __construct()
     {
-        $this->_cnn = new Conection();
+        $this->conection = new Conection();
     }
 
     /*
@@ -16,7 +16,7 @@ class Repo
      * */
     public function getList()
     {
-        return $this->_cnn->getList(self::tblcbgv);
+        return $this->conection->getList(self::tblcbgv);
     }
 
     /*
@@ -24,7 +24,7 @@ class Repo
      * */
     public function getGV($id)
     {
-        return $this->_cnn->getGV(self::tblcbgv, $id);
+        return $this->conection->getGV(self::tblcbgv, $id);
     }
 
     /*
@@ -32,7 +32,7 @@ class Repo
      * */
     public function addGV($gv)
     {
-        return $this->_cnn->addGV(self::tblcbgv, $gv);
+        return $this->conection->addGV(self::tblcbgv, $gv);
     }
 
     /*
@@ -40,7 +40,7 @@ class Repo
      * */
     public function updateGV($gv)
     {
-        return $this->_cnn->updateGV(self::tblcbgv, $gv);
+        return $this->conection->updateGV(self::tblcbgv, $gv);
     }
 
     /*
@@ -48,7 +48,7 @@ class Repo
      * */
     public function deleteGV($id)
     {
-        return $this->_cnn->deleteGV(self::tblcbgv, $id);
+        return $this->conection->deleteGV(self::tblcbgv, $id);
     }
 }
 
