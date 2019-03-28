@@ -1,7 +1,7 @@
 <?php
 include_once "config/Config.php";
 
-class Conection extends Config
+class Conection
 {
     /*
     * Lay ra toan bo danh sach giao vien
