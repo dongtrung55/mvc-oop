@@ -10,4 +10,4 @@ RewriteRule ^sua-thong-tin-can-bo-giao-vien-(.*).html$ index.php?controller=GV&a
 
 RewriteRule ^thuc-hien-sua-thong-tin-can-bo-giao-vien-(.*).html$ index.php?controller=GV&act=do_edit&id=$1
 
-RewriteRule ^xoa-cbgv-id-(.*).html$ index.php?controller=cbgv&xoa-id=$1
+RewriteRule ^xoa-cbgv-id-(.*).html$ index.php?controller=GV&act=delete&id=$1
