@@ -24,7 +24,7 @@ class Config
     public function getList($sql)
     {
         $result = mysqli_query(self::connect(), $sql);
-        $arr= Array();
+        $arr = Array();
         foreach ($result as $values) {
             $gv = new CBGV();
             $gv->setID($values['id']);
@@ -35,7 +35,7 @@ class Config
             $gv->setLuongThuong($values['luongThuong']);
             $gv->setLuongPhat($values['luongPhat']);
             $gv->setLuongLinhThuc($values['luongLinhThuc']);
-            $arr[]=$gv;
+            $arr[] = $gv;
         }
         return $arr;
     }
@@ -46,6 +46,7 @@ class Config
     public function getARecord($sql)
     {
         $result = mysqli_query(self::connect(), $sql);
+        //$arr = mysqli_fetch_object($result);
         foreach ($result as $values) {
             $gv = new CBGV();
             $gv->setID($values['id']);
@@ -57,6 +58,7 @@ class Config
             $gv->setLuongPhat($values['luongPhat']);
         }
         return $gv;
+        //return $arr;
     }
 
     /*
