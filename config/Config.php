@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  */
@@ -13,6 +14,7 @@ class Config
         mysqli_set_charset($db, "UTF8");
         return $db;
     }
+
     /*
     * Thuc hien cau truy van lay ra danh sach giao vien
     */
@@ -25,6 +27,7 @@ class Config
         }
         return $arr;
     }
+
     /*
      * Thuc hien cau truy van lay ra thogn tin mot giao vien
      */
@@ -34,6 +37,7 @@ class Config
         $arr = mysqli_fetch_object($result);
         return $arr;
     }
+
     /*
      * Thuc hien cau truy van
     */
@@ -44,7 +48,8 @@ class Config
 
     public function __destruct()
     {
-            mysqli_close(self::connect());
+        mysqli_close(self::connect());
     }
 }
+
 ?>
