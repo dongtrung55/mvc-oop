@@ -12,14 +12,14 @@
         <div class="col-lg-3">
             <div class="form-group">
                 <label>Name:</label>
-                <input type="text" name="cbgv_name" class="form-control" required placeholder="Nhập họ và tên"
+                <input type="text" name="name" class="form-control" required placeholder="Nhập họ và tên"
                        value="<?php echo isset($arr->name) ? $arr->name : ""; ?>">
             </div>
         </div>
         <div class="col-lg-3">
             <div class="form-group">
                 <label>Ngày sinh:</label>
-                <input type="date" name="cbgv_birthday" class="form-control" required
+                <input type="date" name="birthDay" class="form-control" required
                        value="<?php echo isset($arr->birthDay) ? $arr->birthDay : ""; ?>">
             </div>
         </div>
@@ -30,7 +30,7 @@
         <div class="col-lg-6">
             <div class="form-group">
                 <label>Địa chỉ:</label>
-                <input type="text" name="cbgv_address" class="form-control" required placeholder="Nhập địa chỉ"
+                <input type="text" name="address" class="form-control" required placeholder="Nhập địa chỉ"
                        value="<?php echo isset($arr->address) ? $arr->address : ""; ?>">
             </div>
         </div>
@@ -42,14 +42,14 @@
         <div class="col-lg-3">
             <div class="form-group">
                 <label>Lương cứng:</label>
-                <input type="number" name="cbgv_luongcung" class="form-control" required placeholder="Nhập lương cứng"
+                <input type="number" name="luongCung" class="form-control" required placeholder="Nhập lương cứng"
                        value="<?php echo isset($arr->luongCung) ? $arr->luongCung : ""; ?>">
             </div>
         </div>
         <div class="col-lg-3">
             <div class="form-group">
                 <label>Lương thưởng:</label>
-                <input type="number" name="cbgv_luongthuong" class="form-control" required
+                <input type="number" name="luongThuong" class="form-control" required
                        placeholder="Nhập lương thưởng"
                        value="<?php echo isset($arr->luongThuong) ? $arr->luongThuong : ""; ?>">
             </div>
@@ -62,7 +62,7 @@
         <div class="col-lg-6">
             <div class="form-group">
                 <label>Lương phạt:</label>
-                <input type="number" name="cbgv_luongphat" class="form-control" required placeholder="Nhập lương phạt"
+                <input type="number" name="luongPhat" class="form-control" required placeholder="Nhập lương phạt"
                        value="<?php echo isset($arr->luongPhat) ? $arr->luongPhat : ""; ?>">
             </div>
         </div>
