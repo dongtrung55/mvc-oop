@@ -1,16 +1,8 @@
 <?php
 include_once MODEL_PATH . "Repo.php";
+include_once CORE_PATH . "LoadView.php";
 
 use CBGV\CBGV;
-
-class LoadView
-{
-    protected function loadV($view = '', $data = [], $id = '', $form_action = '')
-    {
-        $view = @str_replace('.', '/', $view);
-        require VIEW_PATH . $view . '.php';
-    }
-}
 
 class Controller_GV extends LoadView
 {
