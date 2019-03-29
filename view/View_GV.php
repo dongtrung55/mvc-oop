@@ -13,14 +13,14 @@
             <div class="form-group">
                 <label>Name:</label>
                 <input type="text" name="name" class="form-control" required placeholder="Nhập họ và tên"
-                       value="<?php echo isset($arr->name) ? $arr->name : ""; ?>">
+                       value="<?php echo isset($data->name) ? $data->name : ""; ?>">
             </div>
         </div>
         <div class="col-lg-3">
             <div class="form-group">
                 <label>Ngày sinh:</label>
                 <input type="date" name="birthDay" class="form-control" required
-                       value="<?php echo isset($arr->birthDay) ? $arr->birthDay : ""; ?>">
+                       value="<?php echo isset($data->birthDay) ? $data->birthDay : ""; ?>">
             </div>
         </div>
         <div class="col-lg-3"></div>
@@ -31,7 +31,7 @@
             <div class="form-group">
                 <label>Địa chỉ:</label>
                 <input type="text" name="address" class="form-control" required placeholder="Nhập địa chỉ"
-                       value="<?php echo isset($arr->address) ? $arr->address : ""; ?>">
+                       value="<?php echo isset($data->address) ? $data->address : ""; ?>">
             </div>
         </div>
         <div class="col-lg-3"></div>
@@ -43,7 +43,7 @@
             <div class="form-group">
                 <label>Lương cứng:</label>
                 <input type="number" name="luongCung" class="form-control" required placeholder="Nhập lương cứng"
-                       value="<?php echo isset($arr->luongCung) ? $arr->luongCung : ""; ?>">
+                       value="<?php echo isset($data->luongCung) ? $data->luongCung : ""; ?>">
             </div>
         </div>
         <div class="col-lg-3">
@@ -51,7 +51,7 @@
                 <label>Lương thưởng:</label>
                 <input type="number" name="luongThuong" class="form-control" required
                        placeholder="Nhập lương thưởng"
-                       value="<?php echo isset($arr->luongThuong) ? $arr->luongThuong : ""; ?>">
+                       value="<?php echo isset($data->luongThuong) ? $data->luongThuong : ""; ?>">
             </div>
         </div>
         <div class="col-lg-3">
@@ -63,7 +63,7 @@
             <div class="form-group">
                 <label>Lương phạt:</label>
                 <input type="number" name="luongPhat" class="form-control" required placeholder="Nhập lương phạt"
-                       value="<?php echo isset($arr->luongPhat) ? $arr->luongPhat : ""; ?>">
+                       value="<?php echo isset($data->luongPhat) ? $data->luongPhat : ""; ?>">
             </div>
         </div>
         <div class="col-lg-3">

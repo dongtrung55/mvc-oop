@@ -1,5 +1,8 @@
 <?php
-include "config/Conection.php";
+include_once CONFIG_PATH . "Conection.php";
+include_once MODEL_PATH . "CBGV.php";
+
+use CBGV\CBGV;
 
 class Repo
 {
@@ -16,7 +19,21 @@ class Repo
      * */
     public function getList()
     {
-        return $this->conection->getList(self::tblcbgv);
+        $result = $this->conection->getList(self::tblcbgv);
+        $arr = Array();
+        foreach ($result as $values) {
+            $gv = new CBGV();
+            $gv->setID($values['id']);
+            $gv->setName($values['name']);
+            $gv->setBirthDay($values['birthDay']);
+            $gv->setAddress($values['address']);
+            $gv->setLuongCung($values['luongCung']);
+            $gv->setLuongThuong($values['luongThuong']);
+            $gv->setLuongPhat($values['luongPhat']);
+            $gv->setLuongLinhThuc($values['luongLinhThuc']);
+            $arr[] = $gv;
+        }
+        return $arr;
     }
 
     /*
@@ -24,7 +41,16 @@ class Repo
      * */
     public function getGV($id)
     {
-        return $this->conection->getARecord(self::tblcbgv, $id);
+        $arr = $this->conection->getARecord(self::tblcbgv, $id);
+        $gv = new CBGV();
+        $gv->setID($arr->id);
+        $gv->setName($arr->name);
+        $gv->setBirthDay($arr->birthDay);
+        $gv->setAddress($arr->address);
+        $gv->setLuongCung($arr->luongCung);
+        $gv->setLuongThuong($arr->luongThuong);
+        $gv->setLuongPhat($arr->luongPhat);
+        return $gv;
     }
 
     /*

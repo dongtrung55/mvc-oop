@@ -1,5 +1,5 @@
 <?php
-include_once "Config.php";
+include_once CONFIG_PATH . "Config.php";
 
 class Conection
 {

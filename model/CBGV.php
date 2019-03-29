@@ -2,7 +2,7 @@
 
 namespace CBGV;
 
-include "Nguoi.php";
+include_once MODEL_PATH . "Nguoi.php";
 
 use Nguoi\Nguoi;
 

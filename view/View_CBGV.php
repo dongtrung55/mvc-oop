@@ -18,7 +18,7 @@
     </tr>
     </thead>
     <tbody>
-    <?php foreach ($list as $cbgv) {
+    <?php foreach ($data as $cbgv) {
         ?>
         <tr>
             <td><?php echo $cbgv->id; ?></td>

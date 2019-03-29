@@ -1,9 +1,18 @@
 <?php
-include_once "model/CBGV.php";
+include_once MODEL_PATH . "Repo.php";
 
 use CBGV\CBGV;
 
-class Controller_GV
+class LoadView
+{
+    protected function loadV($view = '', $data = [], $id = '', $form_action = '')
+    {
+        $view = @str_replace('.', '/', $view);
+        require VIEW_PATH . $view . '.php';
+    }
+}
+
+class Controller_GV extends LoadView
 {
     protected $repoGV;
     protected $giaoVien;
@@ -12,6 +21,7 @@ class Controller_GV
     {
         $this->repoGV = new Repo();
         $this->giaoVien = new CBGV();
+        $this->view = new LoadView();
         if (isset($_GET["act"])) {
             $act = $_GET["act"];
             $id = isset($_GET["id"]) ? $_GET["id"] : 0;
@@ -23,6 +33,8 @@ class Controller_GV
                 case "edit":
                     $form_action = "thuc-hien-sua-thong-tin-can-bo-giao-vien-$id.html";
                     $arr = $this->repoGV->getGV($id);
+                    // Load view
+                    $this->view->loadV('View_GV', $arr, $id, $form_action);
                     break;
                 case "do_edit":
                     $luongLinhThuc = $_POST["luongCung"] + $_POST["luongThuong"] - $_POST["luongPhat"];
@@ -39,6 +51,8 @@ class Controller_GV
                     break;
                 case "add":
                     $form_action = "thuc-hien-them-can-bo-giao-vien.html";
+                    // Load view
+                    $this->view->loadV('View_GV', '', '', $form_action);
                     break;
                 case "do_add":
                     $luongLinhThuc = $_POST["luongCung"] + $_POST["luongThuong"] - $_POST["luongPhat"];
@@ -53,12 +67,11 @@ class Controller_GV
                     echo "<script>location.href='danh-sach-can-bo-giao-vien.html';</script>";
                     break;
             }
-            include "view/View_GV.php";
         } else {
             //lay tat ca cac ban ghi
-            $list = $this->repoGV->getList();
-            //load view
-            include "view/View_CBGV.php";
+            $data = $this->repoGV->getList();
+            // Load view
+            $this->view->loadV('View_CBGV', $data, '', '');
         }
     }
 }
