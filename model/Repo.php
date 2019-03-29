@@ -32,7 +32,7 @@ class Repo
      * */
     public function addGV($gv)
     {
-        return $this->conection->addGV(self::tblcbgv, $gv);
+        return $this->conection->add(self::tblcbgv, $gv);
     }
 
     /*
@@ -40,7 +40,7 @@ class Repo
      * */
     public function updateGV($gv)
     {
-        return $this->conection->updateGV(self::tblcbgv, $gv);
+        return $this->conection->update(self::tblcbgv, $gv);
     }
 
     /*
@@ -48,7 +48,7 @@ class Repo
      * */
     public function deleteGV($id)
     {
-        return $this->conection->deleteGV(self::tblcbgv, $id);
+        return $this->conection->delete(self::tblcbgv, $id);
     }
 }
 

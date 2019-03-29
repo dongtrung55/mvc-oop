@@ -24,7 +24,7 @@ class Conection
     /*
     * Them giao vien
     */
-    public function addGV($table, $gv)
+    public function add($table, $gv)
     {
         $name_column = '';
         $value_column = '';
@@ -39,7 +39,7 @@ class Conection
     /*
     * Sua giao vien
     */
-    public function updateGV($table, $gv)
+    public function update($table, $gv)
     {
         $sql = '';
         $id = $gv->getId('id');
@@ -53,7 +53,7 @@ class Conection
     /*
     * Xoa giao vien
     */
-    public function deleteGV($table, $id)
+    public function delete($table, $id)
     {
         $sql = "DELETE FROM $table WHERE id = $id";
         return Config::Execute($sql);

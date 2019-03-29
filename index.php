@@ -11,4 +11,4 @@ else{
     $controller = "controller/Controller_GV.php";
 }
 include "view/master.php";
-?>
+
