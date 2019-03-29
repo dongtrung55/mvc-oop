@@ -22,9 +22,7 @@ class Controller_GV
                     break;
                 case "edit":
                     $form_action = "thuc-hien-sua-thong-tin-can-bo-giao-vien-$id.html";
-                    $arr = $this->repoGV->getGV($id);echo "<pre>";
-                    print_r($arr);
-                    echo "</pre>";
+                    $arr = $this->repoGV->getGV($id);
                     break;
                 case "do_edit":
                     $luongLinhThuc = $_POST["luongCung"] + $_POST["luongThuong"] - $_POST["luongPhat"];
@@ -59,9 +57,6 @@ class Controller_GV
         } else {
             //lay tat ca cac ban ghi
             $list = $this->repoGV->getList();
-            echo "<pre>";
-            print_r($list);
-            echo "</pre>";
             //load view
             include "view/View_CBGV.php";
         }
