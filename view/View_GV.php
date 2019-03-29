@@ -1,4 +1,4 @@
-<h1>
+<h1 class="text-align">
     <?php if ($id == 0) {
         echo 'Thêm mới cán bộ giáo viên';
     } else {
