@@ -4,8 +4,11 @@ class LoadView
 {
     protected function loadV($view = '', $data = [], $id = '', $form_action = '')
     {
-        $view = @str_replace('.', '/', $view);
-        require VIEW_PATH . $view . '.php';
+        //kiểm tra xem file tồn tại không
+        if(file_exists(VIEW_PATH . $view . '.php')){
+            //Nếu tồn tại thì nhúng file vào.
+            include_once VIEW_PATH . $view . '.php';
+        }
     }
 }
 
