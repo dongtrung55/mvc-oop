@@ -1,8 +1,8 @@
-<h1 class="text-align">Danh sách lương của giáo viên</h1>
+<h1 class="text-center">Danh sách lương của giáo viên</h1>
 <div class="button">
     <a href="them-can-bo-giao-vien.html" class="btn btn-success btn-md"> <i class="fa fa-plus"></i> Thêm mới</a>
 </div>
-<br/><br/>
+<br/>
 <table id="listcbgv" class="table table-striped table-bordered" style="width:100%">
     <thead>
     <tr>
